@@ -33,3 +33,9 @@ int main(){
     scanf("%d",&Element_To_Insert);
     Insert_at_Index(arr,&size,index,Element_To_Insert);
 }
+
+/*OUTPUT EXAMPLE
+Enter index at which you want to insert element: 2
+Enter element to be inserted: 44
+12 23 44 45 65 78 94 55
+*/
