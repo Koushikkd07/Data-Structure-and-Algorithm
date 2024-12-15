@@ -8,7 +8,6 @@ void linearSearch(int arr[], int size, int element) {
         if (arr[i] == element) {
             printf("Element is present at index %d\n", i);
             found = 1;
-            break; // Uncomment this if you want only the first match
         }
     }
     if (!found) {
@@ -38,3 +37,13 @@ int main() {
 
     return 0;
 }
+
+/*
+OUTPUT EXAMPLE
+
+Array is:
+2 4 5 7 8 9 6 3 1 55 7 98 653 4 88 7 33 5 2
+Enter the element to search: 4
+Element is present at index 1
+Element is present at index 13
+*/
