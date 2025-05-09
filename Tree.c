@@ -32,28 +32,23 @@ void inorderTraversal(struct node* root){
     }
 }
 
-// Function to print the tree in a structured format
-void printTree(struct node* root, int space) {
+// Function to print the tree in a hierarchical format
+void printTree(struct node* root, int level) {
     if (root == NULL) {
         return;
     }
 
-    // Increase distance between levels
-    int COUNT = 5; // Adjust this value for spacing
-    space += COUNT;
-
     // Print the right subtree first
-    printTree(root->right, space);
+    printTree(root->right, level + 1);
 
-    // Print the current node after spacing
-    printf("\n");
-    for (int i = COUNT; i < space; i++) {
-        printf(" ");
+    // Print the current node with indentation based on its level
+    for (int i = 0; i < level; i++) {
+        printf("       "); // Add spacing for hierarchy
     }
     printf("%d\n", root->data);
 
     // Print the left subtree
-    printTree(root->left, space);
+    printTree(root->left, level + 1);
 }
 
 int main(){
